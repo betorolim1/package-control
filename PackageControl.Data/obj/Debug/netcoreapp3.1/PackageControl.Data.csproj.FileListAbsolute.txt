@@ -1,0 +1,9 @@
+C:\Estudo\package-control\package-control\PackageControl.Data\bin\Debug\netcoreapp3.1\PackageControl.Data.deps.json
+C:\Estudo\package-control\package-control\PackageControl.Data\bin\Debug\netcoreapp3.1\PackageControl.Data.dll
+C:\Estudo\package-control\package-control\PackageControl.Data\bin\Debug\netcoreapp3.1\PackageControl.Data.pdb
+C:\Estudo\package-control\package-control\PackageControl.Data\obj\Debug\netcoreapp3.1\PackageControl.Data.csprojAssemblyReference.cache
+C:\Estudo\package-control\package-control\PackageControl.Data\obj\Debug\netcoreapp3.1\PackageControl.Data.AssemblyInfoInputs.cache
+C:\Estudo\package-control\package-control\PackageControl.Data\obj\Debug\netcoreapp3.1\PackageControl.Data.AssemblyInfo.cs
+C:\Estudo\package-control\package-control\PackageControl.Data\obj\Debug\netcoreapp3.1\PackageControl.Data.csproj.CoreCompileInputs.cache
+C:\Estudo\package-control\package-control\PackageControl.Data\obj\Debug\netcoreapp3.1\PackageControl.Data.dll
+C:\Estudo\package-control\package-control\PackageControl.Data\obj\Debug\netcoreapp3.1\PackageControl.Data.pdb
