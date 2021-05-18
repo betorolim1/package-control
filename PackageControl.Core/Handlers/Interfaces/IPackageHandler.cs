@@ -9,6 +9,6 @@ namespace PackageControl.Core.Handlers.Interfaces
     public interface IPackageHandler
     {
         Task UpdatePackagesAsync(List<UpdatePackageCommand> updatePackages);
-        Task InsertPackagesAsync(List<InsertPackageCommand> insertPackages);
+        Task<List<string>> InsertPackagesAsync(List<InsertPackageCommand> insertPackages);
     }
 }

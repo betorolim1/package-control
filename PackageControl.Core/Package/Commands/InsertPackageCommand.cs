@@ -1,4 +1,6 @@
-﻿namespace PackageControl.Core.Package.Commands
+﻿using System;
+
+namespace PackageControl.Core.Package.Commands
 {
     public class InsertPackageCommand
     {
@@ -14,5 +16,11 @@
         public string City { get; set; }
         public byte TypeOfControl { get; set; }
         public byte PlaceType { get; set; }
+        public DateTime ReceivedDate { get; private set; }
+
+        public void SetReceivedDate(DateTime receivedDate)
+        {
+            ReceivedDate = receivedDate;
+        }
     }
 }

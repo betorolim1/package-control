@@ -103,3 +103,13 @@ C:\Users\Usuario\Desktop\Estudo\package-control\PackageControl\bin\Debug\netcore
 C:\Users\Usuario\Desktop\Estudo\package-control\PackageControl\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Usuario\Desktop\Estudo\package-control\PackageControl\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\Usuario\Desktop\Estudo\package-control\PackageControl\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Estudo\package-control\package-control\PackageControl\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Estudo\package-control\package-control\PackageControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Estudo\package-control\package-control\PackageControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Estudo\package-control\package-control\PackageControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Http.dll
+C:\Estudo\package-control\package-control\PackageControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Estudo\package-control\package-control\PackageControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Estudo\package-control\package-control\PackageControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Estudo\package-control\package-control\PackageControl\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Estudo\package-control\package-control\PackageControl\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Estudo\package-control\package-control\PackageControl\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll

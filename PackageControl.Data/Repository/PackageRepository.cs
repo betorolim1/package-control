@@ -54,7 +54,7 @@ namespace PackageControl.Data.Repository
                     );
         }
 
-        public async Task<bool> HasPackageByTrackingCode(string trackingCode)
+        public async Task<bool> HasPackageByTrackingCodeAsync(string trackingCode)
         {
             await _session.OpenAsync();
 
@@ -80,7 +80,7 @@ namespace PackageControl.Data.Repository
             return false;
         }
 
-        public async Task InsertPackagesAsync(string trackingCode, DateTime receivedDate, InsertPackageCommand package, long lastCheckpointId)
+        public async Task InsertPackagesAsync(string trackingCode, InsertPackageCommand package, long lastCheckpointId)
         {
             await _session.OpenAsync();
 
@@ -122,7 +122,7 @@ namespace PackageControl.Data.Repository
                          package.Price,
                          package.Size,
                          package.AreaToDeliver,
-                         ReceivedDate = receivedDate,
+                         package.ReceivedDate,
                          TrackingCode = trackingCode,
                          LastCheckpointId = lastCheckpointId
                      },

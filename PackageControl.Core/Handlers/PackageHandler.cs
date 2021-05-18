@@ -33,8 +33,9 @@ namespace PackageControl.Core.Handlers
             _countryService = countryService;
         }
 
-        public async Task InsertPackagesAsync(List<InsertPackageCommand> insertPackages)
+        public async Task<List<string>> InsertPackagesAsync(List<InsertPackageCommand> insertPackages)
         {
+            var trackingCodes = new List<string>();
             try
             {
                 await _unitOfWork.BeginTransactionAsync();
@@ -43,19 +44,21 @@ namespace PackageControl.Core.Handlers
                 {
                     var countryData = await _countryService.GetCountryData(package.Country);
 
-                    if (countryData is null)
+                    if (countryData is null || countryData.NumericCode is null || countryData.Alpha2Code is null)
                         throw new Exception($"Country {package.Country} not found");
 
-                    var receivedDate = DateTime.Now;
-
-                    var trackingCode = getTrackingCode(countryData, package.AreaToDeliver, receivedDate);
+                    var trackingCode = getTrackingCode(countryData, package.AreaToDeliver, package.ReceivedDate);
 
                     var lastCheckpointId = await _lastCheckpointRepository.InsertLastCheckpoint(package.Country, package.City, package.TypeOfControl, package.PlaceType);
 
-                    await _packageRepository.InsertPackagesAsync(trackingCode, receivedDate, package, lastCheckpointId);
+                    await _packageRepository.InsertPackagesAsync(trackingCode, package, lastCheckpointId);
+
+                    trackingCodes.Add(trackingCode);
                 }
 
                 _unitOfWork.Commit();
+
+                return trackingCodes;
             }
             catch (Exception)
             {
@@ -76,7 +79,7 @@ namespace PackageControl.Core.Handlers
 
                 foreach (var package in updatePackages)
                 {
-                    var hasPackage = await _packageRepository.HasPackageByTrackingCode(package.TrackingCode);
+                    var hasPackage = await _packageRepository.HasPackageByTrackingCodeAsync(package.TrackingCode);
 
                     if (!hasPackage)
                     {

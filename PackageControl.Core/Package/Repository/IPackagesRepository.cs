@@ -11,7 +11,7 @@ namespace PackageControl.Core.Package.Repository
     public interface IPackagesRepository
     {
         Task UpdatePackagesAsync(UpdatePackageCommand package, long lastCheckpointId);
-        Task<bool> HasPackageByTrackingCode(string trackingCode);
-        Task InsertPackagesAsync(string trackingCode, DateTime receivedDate, InsertPackageCommand package, long lastCheckpointId);
+        Task<bool> HasPackageByTrackingCodeAsync(string trackingCode);
+        Task InsertPackagesAsync(string trackingCode, InsertPackageCommand package, long lastCheckpointId);
     }
 }

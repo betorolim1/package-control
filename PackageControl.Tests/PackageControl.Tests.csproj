@@ -23,6 +23,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PackageControl.Core\PackageControl.Core.csproj" />
+    <ProjectReference Include="..\PackageControl.Query\PackageControl.Query.csproj" />
+    <ProjectReference Include="..\PackageControl\PackageControl.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,4 @@
 ﻿using PackageControl.Query.Handlers.Interface;
-using PackageControl.Query.Package.Dao.Dto;
 using PackageControl.Query.Package.Dao.Interfaces;
 using PackageControl.Query.Package.Result;
 using PackageControl.Shared;

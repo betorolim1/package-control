@@ -2,6 +2,7 @@
 using PackageControl.Core.Handlers.Interfaces;
 using PackageControl.Core.Package.Commands;
 using PackageControl.Query.Handlers.Interface;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -20,7 +21,7 @@ namespace package_control.Controllers
         }
 
         [HttpGet("trackingcodes")]
-        public async Task<ActionResult> GetPackageByTrankingCodeListAsync([FromQuery] string[] trackingCodes)
+        public async Task<ActionResult> GetPackageByTrackingCodeListAsync([FromQuery] string[] trackingCodes)
         {
             var result = await _packageQueryHandler.GetPackageByTrackingCodesAsync(trackingCodes);
 
@@ -28,7 +29,7 @@ namespace package_control.Controllers
         }
 
         [HttpGet("trackingcode/{trackingCode}")]
-        public async Task<ActionResult> GetPackageByTrankingCodeAsync(string trackingCode)
+        public async Task<ActionResult> GetPackageByTrackingCodeAsync(string trackingCode)
         {
             var result = await _packageQueryHandler.GetPackageByTrackingCodesAsync(new string[] { trackingCode });
 
@@ -36,7 +37,7 @@ namespace package_control.Controllers
         }
 
         [HttpGet("status/{statusNumber}")]
-        public async Task<ActionResult> GetTrankingCodesByStatusAsync(byte statusNumber)
+        public async Task<ActionResult> GetTrackingCodesByStatusAsync(byte statusNumber)
         {
             var result = await _packageQueryHandler.GetTrackingCodesByStatusAsync(statusNumber);
 
@@ -65,7 +66,7 @@ namespace package_control.Controllers
             if (list is null)
                 return BadRequest();
 
-           await _packageHandler.UpdatePackagesAsync(list);
+            await _packageHandler.UpdatePackagesAsync(list);
 
             return Ok();
         }
@@ -76,9 +77,14 @@ namespace package_control.Controllers
             if (list is null)
                 return BadRequest();
 
-           await _packageHandler.InsertPackagesAsync(list);
+            foreach (var item in list)
+            {
+                item.SetReceivedDate(DateTime.Now);
+            };
 
-            return Ok();
+            var result = await _packageHandler.InsertPackagesAsync(list);
+
+            return Ok(result);
         }
     }
 }
