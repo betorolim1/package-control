@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Estudo\\package-control\\package-control\\PackageControl.Tests\\PackageControl.Tests.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Tests\\PackageControl.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Estudo\\package-control\\package-control\\PackageControl.Tests\\PackageControl.Tests.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Core\\PackageControl.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Estudo\\package-control\\package-control\\PackageControl.Tests\\PackageControl.Tests.csproj",
-        "projectName": "PackageControl.Tests",
-        "projectPath": "C:\\Estudo\\package-control\\package-control\\PackageControl.Tests\\PackageControl.Tests.csproj",
-        "packagesPath": "C:\\Users\\adalberto.nogueira\\.nuget\\packages\\",
-        "outputPath": "C:\\Estudo\\package-control\\package-control\\PackageControl.Tests\\obj\\",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Core\\PackageControl.Core.csproj",
+        "projectName": "PackageControl.Core",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Core\\PackageControl.Core.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\adalberto.nogueira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,74 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://bahrein:8080/tfs/DPT/_packaging/GPS/nuget/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Shared\\PackageControl.Shared.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Shared\\PackageControl.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Shared\\PackageControl.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Shared\\PackageControl.Shared.csproj",
+        "projectName": "PackageControl.Shared",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Shared\\PackageControl.Shared.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,9 +108,85 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Tests\\PackageControl.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Tests\\PackageControl.Tests.csproj",
+        "projectName": "PackageControl.Tests",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Tests\\PackageControl.Tests.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Core\\PackageControl.Core.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\package-control\\PackageControl.Core\\PackageControl.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.7.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

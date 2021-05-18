@@ -5,5 +5,11 @@
     <RootNamespace>PackageControl</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PackageControl.Core\PackageControl.Core.csproj" />
+    <ProjectReference Include="..\PackageControl.Data\PackageControl.Data.csproj" />
+    <ProjectReference Include="..\PackageControl.Query\PackageControl.Query.csproj" />
+  </ItemGroup>
+
 
 </Project>
